@@ -34,6 +34,11 @@ namespace ImageService.Controller.Handlers
             this.m_logging = logging;
         }
 
+        /// <summary>
+        /// called when eventHandler is invoke.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e">command id</param>
         public void OnCommandRecieved(object sender, CommandRecievedEventArgs e)
         {
             //check if the command is close
@@ -60,6 +65,9 @@ namespace ImageService.Controller.Handlers
 
         }
 
+        /// <summary>
+        /// close this directory
+        /// </summary>
         private void CloseHandler()
         {
             this.m_dirWatcher.Created -= new FileSystemEventHandler(DirectoryCreated);
@@ -71,6 +79,11 @@ namespace ImageService.Controller.Handlers
             DirectoryClose?.Invoke(this, directoryCloseEvent);
         }
 
+        /// <summary>
+        /// called when a new file was added to the directory
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e">picture path</param>
         private void DirectoryCreated(object source, FileSystemEventArgs e)
         {
             this.m_logging.Log("another pic was added " + Path.GetExtension(e.FullPath), MessageTypeEnum.INFO);
@@ -83,7 +96,11 @@ namespace ImageService.Controller.Handlers
                 this.OnCommandRecieved(this, eventArgs);
             }
         }
-
+        
+        /// <summary>
+        /// add the directory to the watcher list
+        /// </summary>
+        /// <param name="dirPath"></param>
         public void StartHandleDirectory(string dirPath)
         {
             this.m_path = dirPath;

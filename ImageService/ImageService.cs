@@ -50,13 +50,19 @@ namespace ImageService
         [DllImport("advapi32.dll", SetLastError = true)]
         private static extern bool SetServiceStatus(IntPtr handle, ref ServiceStatus serviceStatus);
 
+        /// <summary>
+        /// ImageService constructor.
+        /// </summary>
+        /// <param name="args"></param>
         public ImageService(string[] args)
         {
             InitializeComponent();
+            //  get the data from the app config
             string logName = ConfigurationManager.AppSettings.Get("LogName");
             int thumbnailSize = Int32.Parse(ConfigurationManager.AppSettings.Get("ThumbnailSize"));
             string sourceName = ConfigurationManager.AppSettings.Get("SourceName");
             string outputDir = ConfigurationManager.AppSettings.Get("OutputDir");
+            //we will probably not use it
             if (args.Count() > 0)
             {
                 sourceName = args[0];
@@ -65,6 +71,7 @@ namespace ImageService
             {
                 logName = args[1];
             }
+
             eventLog1 = new System.Diagnostics.EventLog();
             if (!System.Diagnostics.EventLog.SourceExists(sourceName))
             {
@@ -73,13 +80,18 @@ namespace ImageService
             eventLog1.Source = sourceName;
             eventLog1.Log = logName;
 
-            modal = new ImageServiceModal(outputDir, thumbnailSize);
-            controller = new ImageController(modal);
+            this.modal = new ImageServiceModal(outputDir, thumbnailSize);
+            this.controller = new ImageController(modal);
 
-            logging = new LoggingService();
-            logging.MessageRecieved += MessageEvent;
+            this.logging = new LoggingService();
+            this.logging.MessageRecieved += MessageEvent;
         }
 
+        /// <summary>
+        /// write to log.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MessageEvent(object sender, MessageRecievedEventArgs e)
         {
             this.eventId++;
@@ -87,6 +99,10 @@ namespace ImageService
             eventLog1.WriteEntry(toLog, EventLogEntryType.Information, this.eventId);
         }
 
+        /// <summary>
+        /// system calls it when the service start.
+        /// </summary>
+        /// <param name="args"></param>
         protected override void OnStart(string[] args)
         {
             // Update the service state to Start Pending.  
@@ -94,9 +110,9 @@ namespace ImageService
             serviceStatus.dwCurrentState = ServiceState.SERVICE_START_PENDING;
             serviceStatus.dwWaitHint = 100000;
             SetServiceStatus(this.ServiceHandle, ref serviceStatus);
-
+     
             eventLog1.WriteEntry("In OnStart");
-
+            //create the server
             this.m_imageServer = new ImageServer(controller, logging);
 
             // Set up a timer to trigger every minute.  
@@ -110,12 +126,20 @@ namespace ImageService
             SetServiceStatus(this.ServiceHandle, ref serviceStatus);
         }
 
+        /// <summary>
+        /// writes to Log regularly.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
         {
             // TODO: Insert monitoring activities here.  
             eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
         }
 
+        /// <summary>
+        /// system calls it when the service stop.
+        /// </summary>
         protected override void OnStop()
         {
             // Update the service state to Start Pending.  
@@ -138,6 +162,9 @@ namespace ImageService
 
         }
 
+        /// <summary>
+        /// system calls it when the service continue.
+        /// </summary>
         protected override void OnContinue()
         {
             eventLog1.WriteEntry("In OnContinue.");

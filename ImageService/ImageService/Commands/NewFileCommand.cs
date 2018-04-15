@@ -16,6 +16,12 @@ namespace ImageService.Commands
             m_modal = modal;            // Storing the Modal
         }
 
+        /// <summary>
+        /// execute the new file command
+        /// </summary>
+        /// <param name="args">path of file</param>
+        /// <param name="result">success or fail</param>
+        /// <returns></returns>
         public string Execute(string[] args, out bool result)
         {
             return this.m_modal.AddFile(args[0], out result);

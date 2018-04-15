@@ -24,6 +24,12 @@ namespace ImageService.Modal
             this.m_thumbnailSize = thumbnailSize;
         }
 
+        /// <summary>
+        /// move the new image to the output directory
+        /// </summary>
+        /// <param name="path">path of the picture</param>
+        /// <param name="result">result</param>
+        /// <returns></returns>
         public string AddFile(string path, out bool result)
         {
             string imageName = Path.GetFileName(path);
@@ -45,7 +51,7 @@ namespace ImageService.Modal
 
             int counter = 0;
 
-            //  check if thumbnail file is 
+            //  check if thumbnail file is exist
             string destThumbPath = string.Format("{0}\\{1}\\{2}\\{3}\\{4}", m_OutputFolder, "thumbnails", year, month, imageName);
             if (!File.Exists(destThumbPath))
             {
@@ -56,10 +62,12 @@ namespace ImageService.Modal
                     thumbnail.Save(destThumbPath);
                 }
             }
+            // thumbnail is exist amd now should add (i) before the thumbnail name
             else
             {
                 counter = 1;
                 destThumbPath = string.Format("{0}\\{1}\\{2}\\{3}\\({4}){5}", m_OutputFolder, "thumbnails", year, month, counter, imageName);
+                //  while thumbnail is exist
                 while (File.Exists(destThumbPath))
                 {
                     counter++;
@@ -72,6 +80,7 @@ namespace ImageService.Modal
                 }
             }
 
+            //  if we change the thumbnail so we should change the image name as well.
             if (counter > 0)
             {
                 imageName = string.Format("({0}){1}", counter, imageName);

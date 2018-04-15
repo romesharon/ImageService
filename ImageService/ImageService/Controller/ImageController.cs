@@ -24,6 +24,14 @@ namespace ImageService.Controller
                 {(int)CommandEnum.NewFileCommand, new NewFileCommand(m_modal)}
             };
         }
+
+        /// <summary>
+        /// execute the command
+        /// </summary>
+        /// <param name="commandID">command id in the dictionary</param>
+        /// <param name="args">arguments to the command</param>
+        /// <param name="resultSuccesful">result</param>
+        /// <returns></returns>
         public string ExecuteCommand(int commandID, string[] args, out bool resultSuccesful)
         {
             // Write Code Here
