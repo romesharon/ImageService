@@ -6,9 +6,13 @@ using ImageService.Modal;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ImageService.Server
 {
@@ -17,6 +21,7 @@ namespace ImageService.Server
         #region Members
         private IImageController m_controller;
         private ILoggingService m_logging;
+        private TcpListener server;
         #endregion
 
         #region Properties
@@ -79,6 +84,43 @@ namespace ImageService.Server
                 this.CommandRecieved -= directoryHandler.OnCommandRecieved;
                 directoryHandler.DirectoryClose -= CloseServer; 
             }
+        }
+
+        public void Start()
+        {
+            IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+
+            // TcpListener server = new TcpListener(port);
+            server = new TcpListener(localAddr, 12345);
+
+            // Start listening for client requests.
+            server.Start();
+            this.m_logging.Log("Waiting for client connections", Logging.Modal.MessageTypeEnum.INFO);
+
+            Task thread = new Task(() =>
+            {
+                TcpClient client = server.AcceptTcpClient();
+
+                using (NetworkStream stream = client.GetStream())
+                using (BinaryReader reader = new BinaryReader(stream))
+                using (BinaryWriter writer = new BinaryWriter(stream))
+                try
+                {
+                    this.m_logging.Log("Client connected", Logging.Modal.MessageTypeEnum.INFO);
+                    string commandLine = reader.ReadString();
+                    this.m_logging.Log("Client send " + commandLine + " ", Logging.Modal.MessageTypeEnum.INFO);
+                    string configvalue1 = ConfigurationManager.AppSettings["Handler"];
+                    this.m_logging.Log("Handler " + configvalue1 + " ", Logging.Modal.MessageTypeEnum.INFO);
+                    writer.Write("helloClient");
+                    this.m_logging.Log("After write", Logging.Modal.MessageTypeEnum.INFO);
+                }
+                catch (Exception e)
+                {
+                    this.m_logging.Log("Error: " + e.Message, Logging.Modal.MessageTypeEnum.FAIL);
+                }
+
+            });
+            thread.Start();
         }
     }
 }
