@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using ImageServiceGUI.Client;
+using ImageService.Infrastructure.Enums;
+using Newtonsoft.Json;
+using System.Windows;
+using ImageService.Infrastructure;
 
 namespace ImageServiceGUI.Model
 {
@@ -17,7 +15,15 @@ namespace ImageServiceGUI.Model
         string sourceName;
         string logName;
         int thumbnailSize;
-        private ObservableCollection<string> Handlers = new ObservableCollection<string>();
+        private bool connected;
+        private ObservableCollection<string> handlers = new ObservableCollection<string>();
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public ModelSettings()
+        {
+            ClientSock client = ClientSock.Instance;
+            client.MessageRecived += GetMessageFromServer;
+        }
 
         public string OutputDirectory
         {
@@ -28,7 +34,7 @@ namespace ImageServiceGUI.Model
             set
             {
                 this.outputDirectory = value;
-                //notify property changed
+                this.NotifyPropertyChanged("OutputDirectory");
             }
         }
         public string SourceName
@@ -40,7 +46,7 @@ namespace ImageServiceGUI.Model
             set
             {
                 this.sourceName = value;
-                //notify property changed
+                this.NotifyPropertyChanged("SourceName");
             }
         }
         public string LogName
@@ -52,7 +58,7 @@ namespace ImageServiceGUI.Model
             set
             {
                 this.logName = value;
-                //notify property changed
+                this.NotifyPropertyChanged("LogName");
             }
         }
         public int ThumbnailSize
@@ -64,56 +70,86 @@ namespace ImageServiceGUI.Model
             set
             {
                 this.thumbnailSize = value;
-                //notify property changed
+                this.NotifyPropertyChanged("ThumbnailSize");
+            }
+        }
+        public bool Connected
+        {
+            set
+            {
+                this.connected = value;
+                this.NotifyPropertyChanged("Connected");
+            }
+            get { return this.connected; }
+        }
+        public ObservableCollection<string> Handlers
+        {
+            get { return this.handlers; }
+        }
+        private void NotifyPropertyChanged(string property)
+        {
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
+
+        public void GetMessageFromServer(object sender, Message message)
+        {
+            switch (message.ID)
+            {
+                case CommandEnum.Settings:
+                    try
+                    {
+                        Info info = JsonConvert.DeserializeObject<Info>(message.Args);
+                        Application.Current.Dispatcher.Invoke(new Action(() =>
+                        {
+                            this.ThumbnailSize = info.ThumbnailSize;
+                            this.OutputDirectory = info.OutputDir;
+                            this.LogName = info.LogName;
+                            this.SourceName = info.SourceName;
+                            foreach (string handler in info.Handlers)
+                            {
+                                this.handlers.Add(handler);
+                            }
+                        }));
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    break;
+                case CommandEnum.CloseCommand:
+                    try
+                    {
+                        string closedHandler = message.Args;
+                        Application.Current.Dispatcher.Invoke(new Action(() =>
+                        {
+                            this.handlers.Remove(closedHandler);
+                        }));
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    break;
+                default:
+                    Console.WriteLine("get different command");
+                    break;
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public void GetInfoFromService()
         {
-            //implement.
-            Task thread = new Task(() =>
-            {
-                TcpClient tc = null;
-                try
-                {
-                    tc = new TcpClient();
-                    tc.Connect(new System.Net.IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345));
+            ClientSock clientSock = ClientSock.Instance;
+            Message m = new Message(CommandEnum.Settings, null);
+            clientSock.Write(JsonConvert.SerializeObject(m));
+        }
 
-                    using (NetworkStream stream = tc.GetStream())
-                    using (BinaryReader reader = new BinaryReader(stream))
-                    using (BinaryWriter writer = new BinaryWriter(stream))
-                    {
-                        // Send command to server
-                        writer.Write("GetInfo"); //or something else
-
-                        //// Get result from server
-                        ////we can change the order.
-                        //this.OutputDirectory = reader.ReadString();
-                        //this.SourceName = reader.ReadString();
-                        //this.LogName = reader.ReadString();
-                        //this.ThumbnailSize = reader.ReadInt32();
-                        //Console.WriteLine(OutputDirectory);
-                        //Console.WriteLine(SourceName);
-                        //Console.WriteLine(LogName);
-                        //Console.WriteLine(ThumbnailSize);
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                finally
-                {
-                    //should close ????????? 
-                    if (tc != null)
-                    {
-                        //tc.Close();
-                    }
-                }
-            });
-            thread.Start();
+        public void RemoveHandler(string handlerPath)
+        {
+            Console.WriteLine("remove handler " + handlerPath);
+            ClientSock client = ClientSock.Instance;
+            Message info = new Message(CommandEnum.CloseCommand, handlerPath);
+            string command = JsonConvert.SerializeObject(info);
+            client.Write(command);
         }
     }
 }

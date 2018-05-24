@@ -10,10 +10,11 @@ namespace ImageServiceGUI.ViewModel
 {
     interface IVMSettings : INotifyPropertyChanged
     {
-        string OutputDirectory { get; }
-        string SourceName { get;}
-        string LogName { get;}
-        int ThumbnailSize { get;}
-        //observable collection for the table
+        string VMOutputDirectory { get; set; }
+        string VMSourceName { get;}
+        string VMLogName { get;}
+        int VMThumbnailSize { get;}
+
+        ObservableCollection<string> VMHandlers { get; }
     }
 }

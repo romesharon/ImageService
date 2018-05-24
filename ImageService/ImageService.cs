@@ -114,7 +114,6 @@ namespace ImageService
             eventLog1.WriteEntry("In OnStart");
             //create the server
             this.m_imageServer = new ImageServer(controller, logging);
-            this.m_imageServer.Start(); // start connection with clients
             // Set up a timer to trigger every minute.  
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 60000; // 60 seconds  

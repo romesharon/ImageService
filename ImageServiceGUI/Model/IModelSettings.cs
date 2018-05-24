@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,10 @@ namespace ImageServiceGUI.Model
         string SourceName { get; set; }
         string LogName { get; set; }
         int ThumbnailSize { get; set; }
+        bool Connected { get; set; }
+        ObservableCollection<string> Handlers { get; }
 
-        void GetInfoFromService();
+        void RemoveHandler(string handlerPath);
+        void GetInfoFromService(); // get settings from server
     }
 }

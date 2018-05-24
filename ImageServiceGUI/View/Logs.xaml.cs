@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageServiceGUI.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageServiceGUI
+namespace ImageServiceGUI.View
 {
     /// <summary>
     /// Interaction logic for Logs.xaml
@@ -23,6 +24,7 @@ namespace ImageServiceGUI
         public Logs()
         {
             InitializeComponent();
+            this.DataContext = new VMLog();
         }
     }
 }
