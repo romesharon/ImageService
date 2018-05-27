@@ -22,6 +22,7 @@ namespace ImageServiceGUI.Client
         private static ClientSock instance;
         private TcpClient client;
         public event EventHandler<Message> MessageRecived;
+        private bool isConnected = false;
         private ClientSock()
         {
             try
@@ -33,9 +34,11 @@ namespace ImageServiceGUI.Client
                 this.reader = new BinaryReader(stream);
                 this.writer = new BinaryWriter(stream);
                 Read(); // read from server the old logs and settings
+                IsConnected = true;
             }
             catch (Exception e) {
                 Console.WriteLine(e.Message);
+                IsConnected = false;
             }
         }
 
@@ -50,6 +53,8 @@ namespace ImageServiceGUI.Client
                 return instance;
             }
         }
+
+        public bool IsConnected { get => isConnected; set => isConnected = value; }
 
         public void Write(string message)
         {

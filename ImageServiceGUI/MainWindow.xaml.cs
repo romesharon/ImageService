@@ -27,6 +27,7 @@ namespace ImageServiceGUI
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new VMMain();
         }
     }
 }

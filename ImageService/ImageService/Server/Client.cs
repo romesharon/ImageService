@@ -74,7 +74,6 @@ namespace ImageService.Server
                                 this.loggingService.Log("client args for close commad: " + clientMessage.Args, MessageTypeEnum.INFO);
                                 bool result;
                                 string val = this.imageController.ExecuteCommand((int)clientMessage.ID, args, out result);
-                                // this.loggingService.Log("val is " + val, MessageTypeEnum.INFO);
                                 Message answer;
                                 // faild to close handler
                                 if (result == false)

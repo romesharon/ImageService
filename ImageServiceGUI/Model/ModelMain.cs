@@ -14,7 +14,7 @@ namespace ImageServiceGUI.Model
 
         public ModelMain()
         {
-            this.connected = (ClientSock.Instance == null) ? false : true;
+            this.connected = ClientSock.Instance.IsConnected;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
