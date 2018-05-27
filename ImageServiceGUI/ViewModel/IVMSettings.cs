@@ -8,6 +8,10 @@ using System.ComponentModel;
 
 namespace ImageServiceGUI.ViewModel
 {
+    /// <summary>
+    /// Interface IVMSettings
+    /// </summary>
+    /// <seealso cref="System.ComponentModel.INotifyPropertyChanged" />
     interface IVMSettings : INotifyPropertyChanged
     {
         string VMOutputDirectory { get; set; }
@@ -15,6 +19,10 @@ namespace ImageServiceGUI.ViewModel
         string VMLogName { get;}
         int VMThumbnailSize { get;}
 
+        /// <summary>
+        /// Gets the vm handlers.
+        /// </summary>
+        /// <value>The vm handlers.</value>
         ObservableCollection<string> VMHandlers { get; }
     }
 }

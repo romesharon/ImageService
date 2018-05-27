@@ -11,6 +11,10 @@ namespace ImageService.Commands
     {
         private IImageServiceModal m_modal;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NewFileCommand"/> class.
+        /// </summary>
+        /// <param name="modal">The modal.</param>
         public NewFileCommand(IImageServiceModal modal)
         {
             m_modal = modal;            // Storing the Modal

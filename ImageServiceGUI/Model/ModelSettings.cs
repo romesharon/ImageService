@@ -137,8 +137,12 @@ namespace ImageServiceGUI.Model
             }
         }
 
+        /// <summary>
+        /// Gets the information from service.
+        /// </summary>
         public void GetInfoFromService()
         {
+            // ask for settings
             ClientSock clientSock = ClientSock.Instance;
             Message m = new Message(CommandEnum.Settings, null);
             clientSock.Write(JsonConvert.SerializeObject(m));

@@ -25,6 +25,11 @@ namespace ImageService.Server
         private IImageController imageController;
         private static Mutex mutex = new Mutex();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Client"/> class.
+        /// </summary>
+        /// <param name="loggingService">The logging service.</param>
+        /// <param name="imageController">The image controller.</param>
         public Client(ILoggingService loggingService, IImageController imageController)
         {
             Console.WriteLine("In client constructor");
@@ -34,9 +39,13 @@ namespace ImageService.Server
             this.clients = new List<TcpClient>();
         }
 
+        /// <summary>
+        /// Adds the client.
+        /// </summary>
+        /// <param name="tcpClient">The TCP client.</param>
         public void AddClient(TcpClient tcpClient)
         {
-            clients.Add(tcpClient);
+            clients.Add(tcpClient); // add the client to the list
             Task thread = new Task(() =>
             {
                 NetworkStream stream = tcpClient.GetStream();
@@ -46,6 +55,7 @@ namespace ImageService.Server
                 {
                     try
                     {
+                        // read the message
                         string messageText = reader.ReadString();
                         this.loggingService.Log("recived: " + messageText, MessageTypeEnum.INFO);
                         Message clientMessage = JsonConvert.DeserializeObject<Message>(messageText);
@@ -53,6 +63,7 @@ namespace ImageService.Server
                         switch (clientMessage.ID)
                         {
                             case CommandEnum.Settings:
+                                // send the settings
                                 Info settings = GetSettingsFromConfig();
                                 string settingsText = JsonConvert.SerializeObject(settings);
                                 message = new Message(CommandEnum.Settings, settingsText);
@@ -61,6 +72,7 @@ namespace ImageService.Server
                                 mutex.ReleaseMutex();
                                 break;
                             case CommandEnum.Log:
+                                // send the logs
                                 LogList logList = GetLogList();
                                 string logListText = JsonConvert.SerializeObject(logList);
                                 message = new Message(CommandEnum.Log, logListText);
@@ -70,6 +82,7 @@ namespace ImageService.Server
                                 mutex.ReleaseMutex();
                                 break;
                             case CommandEnum.CloseCommand:
+                                // close handler
                                 string[] args = { clientMessage.Args };
                                 this.loggingService.Log("client args for close commad: " + clientMessage.Args, MessageTypeEnum.INFO);
                                 bool result;
@@ -102,6 +115,10 @@ namespace ImageService.Server
             thread.Start();
         }
 
+        /// <summary>
+        /// Gets the log list.
+        /// </summary>
+        /// <returns>LogList.</returns>
         private LogList GetLogList()
         {
             ObservableCollection<LogInfo> list = new ObservableCollection<LogInfo>();
@@ -113,6 +130,10 @@ namespace ImageService.Server
             return new LogList(list);
         }
 
+        /// <summary>
+        /// Gets the settings from configuration.
+        /// </summary>
+        /// <returns>Info.</returns>
         private Info GetSettingsFromConfig()
         {
             string handlersText = ConfigurationManager.AppSettings.Get("Handler");
@@ -124,6 +145,11 @@ namespace ImageService.Server
             return new Info(outputDir, sourceName, handlers, logName, thumbnailSize);
         }
 
+        /// <summary>
+        /// Sends the log to all clients.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="args">The <see cref="MessageRecievedEventArgs"/> instance containing the event data.</param>
         public void SendLogToAllClients(object sender, MessageRecievedEventArgs args)
         {
             LogInfo log = new LogInfo(args.Message, args.Status);
@@ -145,6 +171,10 @@ namespace ImageService.Server
             thread.Start();
         }
 
+        /// <summary>
+        /// Sends the message to all clients.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public void SendMessageToAllClients(string message)
         { 
             Task thread = new Task(() =>

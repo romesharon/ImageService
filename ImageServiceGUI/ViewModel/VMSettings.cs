@@ -79,11 +79,20 @@ namespace ImageServiceGUI.ViewModel
             this.model.GetInfoFromService();
         }
 
+        /// <summary>
+        /// Removes the item.
+        /// </summary>
+        /// <param name="obj">The object.</param>
         private void RemoveItem(object obj)
         {
             this.model.RemoveHandler(this.selectedItem);
         }
 
+        /// <summary>
+        /// Determines whether the specified object is selected.
+        /// </summary>
+        /// <param name="obj">The object.</param>
+        /// <returns><c>true</c> if the specified object is selected; otherwise, <c>false</c>.</returns>
         private bool IsSelected(object obj)
         {
             if (selectedItem == null)

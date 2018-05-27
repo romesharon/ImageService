@@ -27,6 +27,7 @@ namespace ImageServiceGUI.Client
         {
             try
             {
+                // try open connection with the server
                 IPEndPoint ec = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345);
                 this.client = new TcpClient();
                 this.client.Connect(ec);
@@ -42,6 +43,10 @@ namespace ImageServiceGUI.Client
             }
         }
 
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
+        /// <value>The instance.</value>
         public static ClientSock Instance
         {
             get
@@ -54,8 +59,16 @@ namespace ImageServiceGUI.Client
             }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is connected.
+        /// </summary>
+        /// <value><c>true</c> if this instance is connected; otherwise, <c>false</c>.</value>
         public bool IsConnected { get => isConnected; set => isConnected = value; }
 
+        /// <summary>
+        /// Writes the specified message.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public void Write(string message)
         {
             try
@@ -68,6 +81,9 @@ namespace ImageServiceGUI.Client
             }
         }
 
+        /// <summary>
+        /// Reads this instance.
+        /// </summary>
         public void Read()
         {
             Task readThread = new Task(() =>
@@ -100,6 +116,9 @@ namespace ImageServiceGUI.Client
 
         }
 
+        /// <summary>
+        /// Stops the communication.
+        /// </summary>
         private void StopCommunication()
         {
             Console.WriteLine("end communication with the server");

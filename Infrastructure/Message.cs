@@ -5,9 +5,20 @@ using System.Text;
 
 namespace ImageService.Infrastructure
 {
+    /// <summary>
+    /// Class Message.
+    /// </summary>
     public class Message
     {
+        /// <summary>
+        /// Gets or sets the arguments.
+        /// </summary>
+        /// <value>The arguments.</value>
         public string Args { get; set; }
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>The identifier.</value>
         public CommandEnum ID { get; set; }
 
         /// <summary>
