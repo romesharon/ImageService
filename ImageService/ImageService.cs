@@ -82,6 +82,7 @@ namespace ImageService
 
             this.modal = new ImageServiceModal(outputDir, thumbnailSize);
             this.controller = new ImageController(modal);
+            this.controller.SetCloseCommand(this.m_imageServer);
 
             this.logging = new LoggingService();
             this.logging.MessageRecieved += MessageEvent;

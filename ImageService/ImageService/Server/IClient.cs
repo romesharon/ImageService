@@ -11,6 +11,7 @@ namespace ImageService.Server
     interface IClient
     {
         void AddClient(TcpClient tcpClient);
-        void SendMessageToAllClients(MessageRecievedEventArgs args);
+        void SendMessageToAllClients(string message);
+        void SendLogToAllClients(object sender, MessageRecievedEventArgs args);
     }
 }

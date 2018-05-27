@@ -14,7 +14,7 @@ using System.Windows;
 
 namespace ImageServiceGUI.Model
 {
-    public class ModleLog : IModelLog
+    public class ModelLog : IModelLog
     {
         private ObservableCollection<LogInfo> logsList = new ObservableCollection<LogInfo>();
         public event PropertyChangedEventHandler PropertyChanged;
@@ -31,7 +31,7 @@ namespace ImageServiceGUI.Model
             }
         }
 
-        public ModleLog()
+        public ModelLog()
         {
             ClientSock client = ClientSock.Instance;
             client.MessageRecived += ReadLogsFromService;

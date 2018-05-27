@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 
@@ -22,10 +23,13 @@ namespace ImageService.Server
         private List<TcpClient> clients;
         private ILoggingService loggingService;
         private IImageController imageController;
+        private static Mutex mutex = new Mutex();
 
         public Client(ILoggingService loggingService, IImageController imageController)
         {
+            Console.WriteLine("In client constructor");
             this.loggingService = loggingService;
+            this.loggingService.MessageRecieved += SendLogToAllClients;
             this.imageController = imageController;
             this.clients = new List<TcpClient>();
         }
@@ -41,29 +45,51 @@ namespace ImageService.Server
                 while (true)
                 {
                     try
-                    {                
-
-                        //  get the command from the client
+                    {
                         string messageText = reader.ReadString();
                         this.loggingService.Log("recived: " + messageText, MessageTypeEnum.INFO);
                         Message clientMessage = JsonConvert.DeserializeObject<Message>(messageText);
-                        if (clientMessage.ID == CommandEnum.Settings)
+                        Message message;
+                        switch (clientMessage.ID)
                         {
-                            Info settings = GetSettingsFromConfig();
-                            string settingsText = JsonConvert.SerializeObject(settings);
-                            Message message = new Message(CommandEnum.Settings, settingsText);
-                            this.loggingService.Log("settings text: " + settingsText, MessageTypeEnum.INFO);
-                            writer.Write(JsonConvert.SerializeObject(message));
+                            case CommandEnum.Settings:
+                                Info settings = GetSettingsFromConfig();
+                                string settingsText = JsonConvert.SerializeObject(settings);
+                                message = new Message(CommandEnum.Settings, settingsText);
+                                mutex.WaitOne();
+                                writer.Write(JsonConvert.SerializeObject(message));
+                                mutex.ReleaseMutex();
+                                break;
+                            case CommandEnum.Log:
+                                LogList logList = GetLogList();
+                                string logListText = JsonConvert.SerializeObject(logList);
+                                message = new Message(CommandEnum.Log, logListText);
+                                this.loggingService.Log("log text: " + logListText, MessageTypeEnum.INFO);
+                                mutex.WaitOne();
+                                writer.Write(JsonConvert.SerializeObject(message));
+                                mutex.ReleaseMutex();
+                                break;
+                            case CommandEnum.CloseCommand:
+                                string[] args = { clientMessage.Args };
+                                this.loggingService.Log("client args for close commad: " + clientMessage.Args, MessageTypeEnum.INFO);
+                                bool result;
+                                string val = this.imageController.ExecuteCommand((int)clientMessage.ID, args, out result);
+                                // this.loggingService.Log("val is " + val, MessageTypeEnum.INFO);
+                                Message answer;
+                                // faild to close handler
+                                if (result == false)
+                                {
+                                    answer = new Message(CommandEnum.FailCommand, val);
+                                }
+                                else
+                                {
+                                    answer = new Message(CommandEnum.CloseCommand, val);
+                                }
+                                string answerText = JsonConvert.SerializeObject(answer);
+                                this.loggingService.Log("answer from close commad " + answerText, MessageTypeEnum.INFO);
+                                this.SendMessageToAllClients(answerText);
+                                break;
                         }
-                        else if(clientMessage.ID == CommandEnum.Log)
-                        {
-                            LogList logList = GetLogList();
-                            string logListText = JsonConvert.SerializeObject(logList);
-                            Message message = new Message(CommandEnum.Log, logListText);
-                            this.loggingService.Log("log text: " + logListText, MessageTypeEnum.INFO);
-                            writer.Write(JsonConvert.SerializeObject(message));
-                        }
-
                     }
                     catch (Exception e)
                     {
@@ -79,15 +105,12 @@ namespace ImageService.Server
 
         private LogList GetLogList()
         {
-            ObservableCollection<LogInfo> list = new ObservableCollection<LogInfo>
+            ObservableCollection<LogInfo> list = new ObservableCollection<LogInfo>();
+            List<LogInfo> historyLogs = this.loggingService.HistoryLogs;
+            foreach (LogInfo log in historyLogs)
             {
-                new LogInfo("hello world", MessageTypeEnum.INFO),
-                new LogInfo("second log :)", MessageTypeEnum.INFO),
-                new LogInfo("warning log :)", MessageTypeEnum.WARNING),
-                new LogInfo("fail log :)", MessageTypeEnum.FAIL)
-
-
-            };
+                list.Add(log);
+            }
             return new LogList(list);
         }
 
@@ -102,21 +125,41 @@ namespace ImageService.Server
             return new Info(outputDir, sourceName, handlers, logName, thumbnailSize);
         }
 
-        public void SendMessageToAllClients(MessageRecievedEventArgs args)
+        public void SendLogToAllClients(object sender, MessageRecievedEventArgs args)
         {
+            LogInfo log = new LogInfo(args.Message, args.Status);
+            ObservableCollection<LogInfo> list = new ObservableCollection<LogInfo> { log };
+            LogList logList = new LogList(list);
+            string messageData = JsonConvert.SerializeObject(logList);
+            Message message = new Message(CommandEnum.Log, messageData);
+            string toSend = JsonConvert.SerializeObject(message);
+
             Task thread = new Task(() =>
             {
                 foreach(TcpClient tcpClient in this.clients)
                 {
-                    using (NetworkStream stream = tcpClient.GetStream())
-                    using (StreamWriter writer = new StreamWriter(stream))
-                    {
-                        string message = string.Format("{0}${1}", args.Message, args.Status);
-                        writer.WriteLine(message);
-                    }
+                    mutex.WaitOne();
+                    (new BinaryWriter(tcpClient.GetStream())).Write(toSend);
+                    mutex.ReleaseMutex();
                 }
             });
             thread.Start();
         }
+
+        public void SendMessageToAllClients(string message)
+        { 
+            Task thread = new Task(() =>
+            {
+                foreach (TcpClient tcpClient in this.clients)
+                {
+                    mutex.WaitOne();
+                    (new BinaryWriter(tcpClient.GetStream())).Write(message);
+                    mutex.ReleaseMutex();
+                }
+            });
+            thread.Start();
+        }
+
+
     }
 }

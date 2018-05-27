@@ -39,7 +39,7 @@
         <TextBlock x:Name="txtLog" Grid.Row="3" Grid.Column="2" Text="{Binding VMLogName}"/>
         <TextBlock Grid.Row="4" FontWeight="Bold">Thumbnil Size</TextBlock>
         <TextBlock x:Name="txtThumbnail" Grid.Row="4" Grid.Column="2" Text="{Binding VMThumbnailSize}"/>
-        <Button x:Name="Remove" Grid.ColumnSpan="2" Grid.Row="5" Height="20" IsEnabled="False" FontWeight="Bold" Command="{Binding RemoveCommand}">Remove</Button>
+        <Button Grid.ColumnSpan="2" Grid.Row="5" Content="Remove" Command="{Binding RemoveCommand}"/>
         <ListBox x:Name="listBox" Grid.Row="6" Grid.ColumnSpan="2" SelectionMode="Single" ItemsSource="{Binding VMHandlers}" SelectedItem="{Binding SelectedItem}"/>
 
     </Grid>

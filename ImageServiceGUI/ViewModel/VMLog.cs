@@ -14,6 +14,8 @@ namespace ImageServiceGUI.ViewModel
     {
         private IModelLog model;
         public event PropertyChangedEventHandler PropertyChanged;
+        
+
         public ObservableCollection<LogInfo> VMLogsList {
             get
             {
@@ -22,7 +24,7 @@ namespace ImageServiceGUI.ViewModel
         }
         public VMLog()
         {
-            this.model = new ModleLog();
+            this.model = new ModelLog();
             model.PropertyChanged += delegate (Object sender, PropertyChangedEventArgs e) {
                 NotifyPropertyChanged("VM" + e.PropertyName);
             };

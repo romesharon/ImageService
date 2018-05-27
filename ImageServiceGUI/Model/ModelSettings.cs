@@ -86,6 +86,7 @@ namespace ImageServiceGUI.Model
         {
             get { return this.handlers; }
         }
+
         private void NotifyPropertyChanged(string property)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));

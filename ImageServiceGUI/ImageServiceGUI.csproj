@@ -58,12 +58,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Client\ClientSock.cs" />
+    <Compile Include="DelegateCommand.cs" />
+    <Compile Include="Model\IModelMain.cs" />
     <Compile Include="Model\IModelLog.cs" />
-    <Compile Include="Model\ModleLog.cs" />
+    <Compile Include="Model\ModelMain.cs" />
+    <Compile Include="Model\ModelLog.cs" />
     <Compile Include="ViewModel\IVMLog.cs" />
+    <Compile Include="ViewModel\IVMMain.cs" />
     <Compile Include="ViewModel\IVMSettings.cs" />
     <Compile Include="ViewModel\VMLog.cs" />
+    <Compile Include="ViewModel\VMMain.cs" />
     <Compile Include="ViewModel\VMSettings.cs" />
+    <Compile Include="View\Convertors\ConnectionToColor.cs" />
     <Compile Include="View\Convertors\LogStatusToColor.cs" />
     <Compile Include="View\Logs.xaml.cs">
       <DependentUpon>Logs.xaml</DependentUpon>

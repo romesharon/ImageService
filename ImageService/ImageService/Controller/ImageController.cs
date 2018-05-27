@@ -2,6 +2,7 @@
 using ImageService.Infrastructure;
 using ImageService.Infrastructure.Enums;
 using ImageService.Modal;
+using ImageService.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,11 @@ namespace ImageService.Controller
             }
             resultSuccesful = false;
             return $"Error: no command id {commandID}"; 
+        }
+
+        public void SetCloseCommand(ImageServer imageServer)
+        {
+            commands.Add((int)CommandEnum.CloseCommand, new CloseCommand(imageServer));
         }
     }
 }

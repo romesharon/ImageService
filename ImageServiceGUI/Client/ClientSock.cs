@@ -75,7 +75,7 @@ namespace ImageServiceGUI.Client
                     {
                         message = this.reader.ReadString();
                         Message serverMessage = JsonConvert.DeserializeObject<Message>(message);
-                        if (serverMessage.ID == CommandEnum.CloseCommand)
+                        if (serverMessage.ID == CommandEnum.CloseServer)
                         {
                             StopCommunication();
                             break;
