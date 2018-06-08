@@ -1,0 +1,248 @@
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\ApplicationInsights.config
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\csc.exe
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\System.Collections.Immutable.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\vbc.exe
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\VBCSCompiler.exe
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\roslyn\VBCSCompiler.exe.config
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.Web.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.WindowsServer.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.ApplicationInsights.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.Web.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.AI.WindowsServer.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.ApplicationInsights.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+c:\users\igor\documents\visual studio 2015\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\ApplicationInsights.config
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\csc.exe
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\vbc.exe
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\VBCSCompiler.exe
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\WebApplication2.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.Web.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.ApplicationInsights.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Webpages.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.Web.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.ApplicationInsights.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Webpages.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Webpages.Deployment.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Webpages.Razor.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Newtonsoft.Json.dll
+C:\Users\User\Downloads\typeinst\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\obj\Debug\WebApplication2.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\obj\Debug\WebApplication2.pdb
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ApplicationInsights.config
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\csc.exe
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\vbc.exe
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\WebApplication2.dll.config
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\WebApplication2.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\WebApplication2.pdb
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.Web.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.ApplicationInsights.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Newtonsoft.Json.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Helpers.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Mvc.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Razor.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Webpages.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.Web.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.ApplicationInsights.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Newtonsoft.Json.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Razor.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Webpages.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Helpers.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Web.Mvc.xml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\obj\Debug\WebApplication2.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\obj\Debug\WebApplication2.csproj.CopyComplete
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Microsoft.Win32.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\netstandard.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.AppContext.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Collections.Concurrent.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Collections.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Collections.NonGeneric.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Collections.Specialized.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.ComponentModel.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.ComponentModel.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.ComponentModel.TypeConverter.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Console.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Data.Common.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.Contracts.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.Debug.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.Process.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.StackTrace.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.Tools.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.TraceSource.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Diagnostics.Tracing.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Drawing.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Dynamic.Runtime.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Globalization.Calendars.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Globalization.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Globalization.Extensions.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.Compression.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.Compression.ZipFile.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.FileSystem.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.FileSystem.Watcher.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.IsolatedStorage.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.MemoryMappedFiles.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.Pipes.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Linq.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Linq.Expressions.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Linq.Parallel.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Linq.Queryable.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.Http.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.NameResolution.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.NetworkInformation.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.Ping.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.Requests.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.Security.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.Sockets.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.WebHeaderCollection.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.WebSockets.Client.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Net.WebSockets.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.ObjectModel.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Reflection.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Reflection.Extensions.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Reflection.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Resources.Reader.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Resources.ResourceManager.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Resources.Writer.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Extensions.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Handles.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.InteropServices.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Numerics.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Serialization.Formatters.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Serialization.Json.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Serialization.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Runtime.Serialization.Xml.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Claims.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Cryptography.Csp.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.Principal.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Security.SecureString.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Text.Encoding.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Text.Encoding.Extensions.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Text.RegularExpressions.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.Overlapped.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.Tasks.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.Tasks.Parallel.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.Thread.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.ThreadPool.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Threading.Timer.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.ValueTuple.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.ReaderWriter.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XDocument.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XmlDocument.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XmlSerializer.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XPath.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XPath.XDocument.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageService.exe
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageServiceGUI.exe
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Infrastructure.dll
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageServiceGUI.pdb
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageServiceGUI.exe.config
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageService.pdb
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageService.exe.config
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Infrastructure.pdb
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\obj\Debug\WebApplication2.csprojAssemblyReference.cache

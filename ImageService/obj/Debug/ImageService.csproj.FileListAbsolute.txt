@@ -21,7 +21,6 @@ C:\Users\user1\Desktop\ImageService-master\ImageService\obj\Debug\ImageService.p
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\bin\Debug\ImageService.exe.config
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\bin\Debug\ImageService.exe
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\bin\Debug\ImageService.pdb
-C:\Users\user1\Documents\GitHub\ImageService\ImageService\obj\Debug\ImageService.csprojResolveAssemblyReference.cache
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\obj\Debug\ImageService.ImageService.resources
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\obj\Debug\ImageService.ProjectInstaller.resources
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\obj\Debug\ImageService.csproj.GenerateResource.cache
@@ -133,3 +132,4 @@ C:\Users\user1\Documents\GitHub\ImageService\ImageService\obj\Debug\ImageService
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\bin\Debug\ImageServiceGUI.exe
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\bin\Debug\ImageServiceGUI.pdb
 C:\Users\user1\Documents\GitHub\ImageService\ImageService\bin\Debug\ImageServiceGUI.exe.config
+C:\Users\user1\Documents\GitHub\ImageService\ImageService\obj\Debug\ImageService.csprojAssemblyReference.cache

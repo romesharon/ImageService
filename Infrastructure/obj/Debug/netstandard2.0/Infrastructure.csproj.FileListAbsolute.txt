@@ -1,7 +1,6 @@
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.deps.json
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.dll
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.pdb
-C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfoInputs.cache
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\bin\Debug\netstandar
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\bin\Debug\netstandard2.0\System.Configuration.xml
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\bin\Debug\netstandard2.0\System.Security.xml
 C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CopyComplete
+C:\Users\user1\Documents\GitHub\ImageService\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csprojAssemblyReference.cache

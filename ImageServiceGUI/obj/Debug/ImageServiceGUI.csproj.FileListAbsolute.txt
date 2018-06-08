@@ -1,7 +1,6 @@
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\bin\Debug\ImageServiceGUI.exe.config
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\bin\Debug\ImageServiceGUI.exe
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\bin\Debug\ImageServiceGUI.pdb
-C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\ImageServiceGUI.csprojResolveAssemblyReference.cache
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\App.g.cs
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\ImageServiceGUI_MarkupCompile.cache
@@ -140,3 +139,4 @@ C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\bin\Debug\Infrastru
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\bin\Debug\Infrastructure.pdb
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\MainWindow.g.cs
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\MainWindow.baml
+C:\Users\user1\Documents\GitHub\ImageService\ImageServiceGUI\obj\Debug\ImageServiceGUI.csprojAssemblyReference.cache
