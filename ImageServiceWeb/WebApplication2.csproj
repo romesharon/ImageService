@@ -147,13 +147,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Communication\ClientCommunication.cs" />
-    <Compile Include="Communication\IClientCommunication.cs" />
+    <Compile Include="Client\ClientSock.cs" />
+    <Compile Include="Controllers\ConfigController.cs" />
     <Compile Include="Controllers\FirstController.cs" />
     <Compile Include="Controllers\ImageWebController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConfigModel.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\ImageWebModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +178,8 @@
     <Content Include="scripts\jquery-3.0.0.min.map" />
     <Content Include="scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Views\ImageWeb\ImageWeb.cshtml" />
+    <Content Include="Views\Config\Config.cshtml" />
+    <Content Include="Views\Config\Confirm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -186,10 +189,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\ImageServiceGUI\ImageServiceGUI.csproj">
-      <Project>{d37230df-e4fc-4236-8810-a659a8f18704}</Project>
-      <Name>ImageServiceGUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ImageService\ImageService.csproj">
       <Project>{dbc6cc70-881d-4b7a-9172-009972a7062b}</Project>
       <Name>ImageService</Name>

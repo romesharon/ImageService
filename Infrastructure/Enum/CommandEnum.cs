@@ -10,10 +10,10 @@ namespace ImageService.Infrastructure.Enums
     {
         NewFileCommand,
         CloseCommand,
-        CloseClient,
         Settings,
         Log,
         FailCommand,
-        CloseServer
+        CloseServer,
+        CloseClient
     }
 }

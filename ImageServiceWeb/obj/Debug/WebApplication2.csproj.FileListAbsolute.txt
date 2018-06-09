@@ -238,10 +238,7 @@ C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XmlS
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XPath.dll
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\System.Xml.XPath.XDocument.dll
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageService.exe
-C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageServiceGUI.exe
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Infrastructure.dll
-C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageServiceGUI.pdb
-C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageServiceGUI.exe.config
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageService.pdb
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\ImageService.exe.config
 C:\Users\user1\Documents\GitHub\ImageService\ImageServiceWeb\bin\Infrastructure.pdb

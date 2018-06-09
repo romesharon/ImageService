@@ -1,0 +1,40 @@
+﻿@model WebApplication2.Models.ConfigModel
+
+@{
+    ViewBag.Title = "Config";
+}
+<h1>Settings page</h1><br />
+
+
+<p>
+    <b>@Html.DisplayNameFor(model => model.OutputDir):</b> @Html.DisplayFor(model => model.OutputDir)
+</p>
+<p>
+    <b>@Html.DisplayNameFor(model => model.SourceName):</b> @Html.DisplayFor(model => model.SourceName)
+</p>
+<p>
+    <b>@Html.DisplayNameFor(model => model.LogName):</b> @Html.DisplayFor(model => model.LogName)
+</p>
+<p>
+    <b>@Html.DisplayNameFor(model => model.ThumbnailSize):</b> @Html.DisplayFor(model => model.ThumbnailSize)
+</p>
+
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Handlers)
+        </th>
+    </tr>
+    @foreach (var item in Model.Handlers)
+    {
+        <tr>
+
+            <td>
+                @Html.ActionLink(@item, "DeleteHandler", new { selectedHandler = item })
+            </td>
+
+        </tr>
+    }
+</table>
