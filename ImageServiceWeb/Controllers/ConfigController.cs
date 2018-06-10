@@ -12,15 +12,15 @@ namespace WebApplication2.Controllers
         private static string selectedHandler;
         private static ConfigModel configModel = new ConfigModel();
 
-        public void Notify()
+        private void Update(Object sender, EventArgs args)
         {
             Config();
         }
 
         public ConfigController()
         {
-            configModel.Notify -= Notify;
-            configModel.Notify += Notify;
+            configModel.Update -= Update;
+            configModel.Update += Update;
         }
 
 

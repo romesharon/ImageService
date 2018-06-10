@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebApplication2.Models.Photo>
+
+@{
+    ViewBag.Title = "Photos";
+}
+
+<h2>Photos</h2>
+
+@foreach (var item in Model)
+{
+    <div class="col-xs-18 col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="@Url.Content(item.RealPath)" alt="" @*class="img-circle"*@ width="242" height="200">
+            <div class="caption">
+                <h4>@item.RealPath</h4>
+                <p>year: @item.Year Month:@item.Month</p>
+            </div>
+        </div>
+    </div>
+}
+<br />

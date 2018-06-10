@@ -11,8 +11,7 @@ namespace WebApplication2.Models
     public class ConfigModel
     {
         internal ClientSock Client { get; set; }
-        public delegate void NotifyChange();
-        public event NotifyChange Notify;
+        public event EventHandler Update;
         public string SelectedHandler { get; set; }
 
 
@@ -54,6 +53,7 @@ namespace WebApplication2.Models
                         {
                             Handlers.Add(handler);
                         }
+                        Update?.Invoke(this, null);
                     }
                     catch (Exception e)
                     {
@@ -65,6 +65,7 @@ namespace WebApplication2.Models
                     {
                         string closedHandler = message.Args;
                         Handlers.Remove(closedHandler);
+                        Update?.Invoke(this, null);
                     }
                     catch (Exception e)
                     {

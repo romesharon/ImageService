@@ -28,7 +28,7 @@ namespace WebApplication2.Client
             try
             {
                 // try open connection with the server
-                IPEndPoint ec = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345);
+                IPEndPoint ec = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12745);
                 this.client = new TcpClient();
                 this.client.Connect(ec);
                 this.stream = this.client.GetStream();

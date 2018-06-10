@@ -33,7 +33,7 @@ namespace ImageService.Server
         {
             this.m_controller = controller;
             this.m_logging = logging;
-            this.server = new MyServer(this, this.m_controller, this.m_logging, 12345);
+            this.server = new MyServer(this, this.m_controller, this.m_logging, 12745);
 
             string str = ConfigurationManager.AppSettings.Get("Handler");
             string[] directories = str.Split(';');

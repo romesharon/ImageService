@@ -76,7 +76,6 @@ namespace ImageService.Server
                                 LogList logList = GetLogList();
                                 string logListText = JsonConvert.SerializeObject(logList);
                                 message = new Message(CommandEnum.Log, logListText);
-                                this.loggingService.Log("log text: " + logListText, MessageTypeEnum.INFO);
                                 mutex.WaitOne();
                                 writer.Write(JsonConvert.SerializeObject(message));
                                 mutex.ReleaseMutex();
