@@ -10,6 +10,7 @@ namespace WebApplication2.Models
     {
         public event EventHandler Update;
         ConfigModel configModel;
+        private string selectedPhoto;
         List<Photo> photos;
         string[] formats = { ".jpg", ".bmp", ".png", ".gif" };
         private string outputDir;
@@ -23,6 +24,18 @@ namespace WebApplication2.Models
             set
             {
                 photos = value;
+            }
+        }
+
+        public string SelectedPhoto
+        {
+            get
+            {
+                return selectedPhoto;
+            }
+            set
+            {
+                selectedPhoto = value;
             }
         }
 
@@ -102,6 +115,31 @@ namespace WebApplication2.Models
                 }
             }
             return null;
+        }
+
+        public void DeletePhoto()
+        {
+            try
+            {
+                string realPath = "";
+                foreach(Photo photo in this.Photos)
+                {
+                    if (photo.ThumbnailPath.Equals(this.SelectedPhoto))
+                    {
+                        realPath = photo.RealPath;
+                        break;
+                    }
+                }
+
+                string path = realPath.Replace("thumbnails\\", string.Empty);
+                File.Delete(realPath);
+                File.Delete(path);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
         }
     }
 }

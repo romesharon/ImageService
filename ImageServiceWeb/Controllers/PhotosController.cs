@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -33,6 +34,21 @@ namespace WebApplication2.Controllers
         public ActionResult ViewPhoto(string path)
         {
             return View(photosModel.PathToPhoto(path));
+        }
+
+        // GET: Photos
+        public ActionResult DeletePhoto(string path)
+        {
+            photosModel.SelectedPhoto = path;
+            ViewBag.path = Path.GetFileName(path);
+            return View(photosModel);
+        }
+
+        [HttpPost]
+        public ActionResult DeletePhotoOK()
+        {
+            photosModel.DeletePhoto();
+            return RedirectToAction("Photos");
         }
     }
 }

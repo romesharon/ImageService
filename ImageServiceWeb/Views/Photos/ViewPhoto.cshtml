@@ -1,0 +1,17 @@
+﻿@model WebApplication2.Models.Photo
+
+@{
+    ViewBag.Title = "ViewPhoto";
+}
+
+<h2>ViewPhoto</h2>
+
+<br />
+@if (Model != null)
+{
+    <p><b>Name:</b> @Model.Name</p>
+    <p><b>Date:</b> @Model.Month/@Model.Year</p>
+    <a href="@Url.Action("DeletePhoto", new { path = Model.ThumbnailPath})" id="btnDelete" class="btn btn-danger btn-xs" role="button">Delete</a>
+    <br />
+    <img src="@Url.Content(Model.Path)">
+}
